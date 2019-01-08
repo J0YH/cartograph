@@ -32,7 +32,11 @@ const jwtAuth = passport.authenticate('jwt', { session: false });
 // ENDPOINTS
 
 // use is "use middleware"
-app.use(express.static("static"));
+//app.use(express.static("static"));
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client/build')));
+
 
 app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname + '/views/index.html'))
