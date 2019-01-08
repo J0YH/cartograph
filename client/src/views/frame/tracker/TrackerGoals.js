@@ -8,6 +8,9 @@ export class TrackerGoals extends React.Component {
 	}
 
 	render() {
+		console.log(this.props);
+		console.log(this.props.goals);
+
 		return(
 			<div>
 				{this.props.goals.map(goal => (
