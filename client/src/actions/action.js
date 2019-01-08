@@ -76,7 +76,7 @@ export const login = (username, password) => dispatch => {
 	dispatch({
 		type: LOGIN,
 	});
-	fetch('http://localhost:8080/login', {
+	fetch('https://calm-beach-44869.herokuapp.com/login', {
 		method: 'POST',
 		body: JSON.stringify({username, password}),
 		headers: {
@@ -114,7 +114,7 @@ export const editUser = (reqObj) => (dispatch, getState) => {
 	dispatch({
 		type: REQUEST_EDIT_USER
 	});
-	fetch(`http://localhost:8080/users/${decodedToken.user._id}`, {
+	fetch(`https://calm-beach-44869.herokuapp.com/users/${decodedToken.user._id}`, {
 		method: 'PUT',
 		body: JSON.stringify(reqObj),
 		headers: {
@@ -145,7 +145,7 @@ export const getUser = (id) => (dispatch, getState) => {
 	dispatch({
 		type: REQUEST_USER
 	});
-	fetch(`http://localhost:8080/users/${decodedToken.user._id}`, {
+	fetch(`https://calm-beach-44869.herokuapp.com/users/${decodedToken.user._id}`, {
 		method: 'GET',
 		headers: {
 			Accept: 'application/json',
@@ -173,7 +173,7 @@ export const getAllUsers = () => (dispatch, getState) => {
 	dispatch({
 		type: REQUEST_ALL_USERS
 	});
-	fetch('http://localhost:8080/users')
+	fetch('https://calm-beach-44869.herokuapp.com/users')
 	.then(res => {
 		return res.json()
 	}).then(data => {
@@ -196,7 +196,7 @@ export const getGoals = () => (dispatch, getState)  => {
 	dispatch({
 		type: REQUEST_GOALS
 	});
-	fetch(`http://localhost:8080/users/${decodedToken.user._id}/goals`, {
+	fetch(`https://calm-beach-44869.herokuapp.com/users/${decodedToken.user._id}/goals`, {
 		method: 'GET',
 		headers: {
 			Authorization: `Bearer ${authToken}`
@@ -223,7 +223,7 @@ export const editGoal = (goalId, editObj) => (dispatch, getState) => {
 	dispatch({
 		type: REQUEST_EDIT_GOAL
 	});
-	fetch(`http://localhost:8080/goals/${goalId}`, {
+	fetch(`https://calm-beach-44869.herokuapp.com/goals/${goalId}`, {
 		method: 'PUT',
 		body: JSON.stringify(editObj),
 		headers: {
@@ -252,7 +252,7 @@ export const getGoal = (id) => dispatch => {
 	dispatch({
 		type: REQUEST_GOAL
 	});
-	fetch(`http://localhost:8080/goals/${id}`)
+	fetch(`https://calm-beach-44869.herokuapp.com/goals/${id}`)
 	.then(res => {
 		return res.json()
 	}).then(data => {
@@ -273,7 +273,7 @@ export const getAllStrategies = () => dispatch => {
 	dispatch({
 		type: REQUEST_ALL_STRATEGIES
 	});
-	fetch('http://localhost:8080/strategies')
+	fetch('https://calm-beach-44869.herokuapp.com/strategies')
 	.then(res => {
 		return res.json()
 	}).then(data => {
@@ -309,7 +309,7 @@ export const completeAction = (id) => (dispatch, getState) => {
 	dispatch({
 		type: REQUEST_COMPLETE_ACTION,	
 	});
-	fetch(`http://localhost:8080/actions/${id}`, {
+	fetch(`https://calm-beach-44869.herokuapp.com/actions/${id}`, {
 		method: 'PUT',
 		body: JSON.stringify({
 			completedDate: today
@@ -342,7 +342,7 @@ export const getAccomplishments = () => (dispatch, getState) => {
 	dispatch({
 		type: REQUEST_ACCOMPLISHMENTS,
 	});
-	fetch(`http://localhost:8080/users/${decodedToken.user._id}/accomplishments`, {
+	fetch(`https://calm-beach-44869.herokuapp.com/users/${decodedToken.user._id}/accomplishments`, {
 		method: 'GET',
 		headers: {
 			Authorization: `Bearer ${authToken}`
@@ -368,7 +368,7 @@ export const getStrategies = () => (dispatch, getState) => {
 	dispatch({
 		type: REQUEST_STRATEGIES,
 	});
-	fetch(`http://localhost:8080/users/${decodedToken.user._id}/strategies`, {
+	fetch(`https://calm-beach-44869.herokuapp.com/users/${decodedToken.user._id}/strategies`, {
 		method: 'GET',
 		headers: {
 			Authorization: `Bearer ${authToken}`
@@ -396,7 +396,7 @@ export const rateStrategy = (strategyId, ratingObj) => (dispatch, getState) => {
 	dispatch({
 		type: REQUEST_RATE_STRATEGY
 	});
-	fetch(`http://localhost:8080/users/${decodedToken.user._id}/strategies/${strategyId}/ratings`, {
+	fetch(`https://calm-beach-44869.herokuapp.com/users/${decodedToken.user._id}/strategies/${strategyId}/ratings`, {
 
 		method: 'POST',
 		body: JSON.stringify(ratingObj),
@@ -431,7 +431,7 @@ export const editAction = (id, reqObj) => (dispatch, getState) => {
 	dispatch({
 		type: REQUEST_EDIT_ACTION
 	});
-	fetch(`http://localhost:8080/actions/${id}`, {
+	fetch(`https://calm-beach-44869.herokuapp.com/actions/${id}`, {
 		method: 'PUT',
 		body: JSON.stringify(reqObj),
 		headers: {
@@ -461,7 +461,7 @@ export const addGoal = (reqObj) => (dispatch, getState) => {
 	dispatch({
 		type: REQUEST_ADD_GOAL
 	});
-	fetch(`http://localhost:8080/users/${decodedToken.user._id}/goals`, {
+	fetch(`https://calm-beach-44869.herokuapp.com/users/${decodedToken.user._id}/goals`, {
 		method: 'POST',
 		body: JSON.stringify(reqObj),
 		headers: {
@@ -492,7 +492,7 @@ export const addStrategy = (reqObj) => (dispatch, getState) => {
 	dispatch({
 		type: REQUEST_ADD_STRATEGY
 	});
-	fetch(`http://localhost:8080/users/${decodedToken.user._id}/strategies`, {
+	fetch(`https://calm-beach-44869.herokuapp.com/users/${decodedToken.user._id}/strategies`, {
 		method: 'POST',
 		body: JSON.stringify(reqObj),
 		headers: {
@@ -522,7 +522,7 @@ const authToken = getState().account.token;
 	dispatch({
 		type: REQUEST_DELETE_STRATEGY
 	});
-	fetch(`http://localhost:8080/users/${decodedToken.user._id}/strategies/${id}`, {
+	fetch(`https://calm-beach-44869.herokuapp.com/users/${decodedToken.user._id}/strategies/${id}`, {
 		method: 'DELETE',
 		headers: {
 			Accept: 'application/json',
@@ -550,7 +550,7 @@ export const editAccomplishment = (id, reqObj) => (dispatch, getState) => {
 	dispatch({
 		type: REQUEST_EDIT_ACCOMPLISHMENT
 	});
-	fetch(`http://localhost:8080/accomplishments/${id}`, {
+	fetch(`https://calm-beach-44869.herokuapp.com/accomplishments/${id}`, {
 
 		method: 'PUT',
 		body: JSON.stringify(reqObj),
@@ -581,7 +581,7 @@ export const addAccomplishment = (reqObj) => (dispatch, getState) => {
 	dispatch({
 		type: REQUEST_ADD_ACCOMPLISHMENT
 	});
-	fetch(`http://localhost:8080/users/${decodedToken.user._id}/accomplishments`, {
+	fetch(`https://calm-beach-44869.herokuapp.com/users/${decodedToken.user._id}/accomplishments`, {
 		method: 'POST',
 		body: JSON.stringify(reqObj),
 		headers: {
@@ -611,7 +611,7 @@ export const deleteAccomplishment = (id) => (dispatch, getState) => {
 	dispatch({
 		type: REQUEST_DELETE_ACCOMPLISHMENT
 	});
-	fetch(`http://localhost:8080/accomplishments/${id}`, {
+	fetch(`https://calm-beach-44869.herokuapp.com/accomplishments/${id}`, {
 		method: 'DELETE',
 		headers: {
 			Accept: 'application/json',
@@ -642,7 +642,7 @@ export const addAction = (id, reqObj) => (dispatch, getState) => {
 	dispatch({
 		type: REQUEST_ADD_ACTION
 	});
-	fetch(`http://localhost:8080/goals/${id}/actions`, {
+	fetch(`https://calm-beach-44869.herokuapp.com/goals/${id}/actions`, {
 		method: 'POST',
 		body: JSON.stringify(reqObj),
 		headers: {
@@ -672,7 +672,7 @@ export const getCategories = () => dispatch => {
 	dispatch({
 		type: REQUEST_CATEGORIES
 	});
-	fetch('http://localhost:8080/categories', {
+	fetch('https://calm-beach-44869.herokuapp.com/categories', {
 		method: 'GET',
 		headers: {
 			Accept: 'application/json',
@@ -700,7 +700,7 @@ export const deleteAction = (id) => (dispatch, getState) => {
 	dispatch({
 		type: REQUEST_DELETE_ACTION
 	});
-	fetch(`http://localhost:8080/actions/${id}`, {
+	fetch(`https://calm-beach-44869.herokuapp.com/actions/${id}`, {
 		method: 'DELETE',
 		headers: {
 			Accept: 'application/json',
@@ -727,7 +727,7 @@ export const getIndustries = () => dispatch => {
 	dispatch({
 		type: REQUEST_INDUSTRIES
 	});
-	fetch('http://localhost:8080/industries', {
+	fetch('https://calm-beach-44869.herokuapp.com/industries', {
 		method: 'GET',
 		headers: {
 			Accept: 'application/json',
