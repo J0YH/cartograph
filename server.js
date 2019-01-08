@@ -405,7 +405,7 @@ app.delete('/goals/:id', (req, res) => {
 // GOALS - get all by user
 app.get('/users/:id/goals', jwtAuth, (req, res) => {
 	Goal
-	.find({user: req.user._id, $orderby: { dueDate: 1 } })
+	.find({user: req.user._id, $orderby: {dueDate: -1}})
 	.then(goals => {
 		res.status(200).json(goals)
 	}).catch(err => {
