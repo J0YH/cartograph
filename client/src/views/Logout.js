@@ -5,6 +5,10 @@ import './Logout.css';
 
 export class Logout extends React.Component {
 
+	componentDidMount() {
+		//this.props.dispatch logout action here
+	}
+
 	render() {
 		return(
 			<div className='logout-background'>

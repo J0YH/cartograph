@@ -69,7 +69,7 @@ export const REQUEST_DELETE_ACTION_FAIL = 'REQUEST_DELETE_ACTION_FAIL';
 export const REQUEST_INDUSTRIES = 'REQUEST_INDUSTRIES';
 export const REQUEST_INDUSTRIES_SUCCESS = 'REQUEST_INDUSTRIES_SUCCESS';
 export const REQUEST_INDUSTRIES_FAIL = 'REQUEST_INDUSTRIES_FAIL';
-
+export const LOGOUT = 'LOGOUT';
 
 // LOGIN
 export const login = (username, password) => dispatch => {
@@ -100,11 +100,11 @@ export const login = (username, password) => dispatch => {
 }
 
 // LOGOUT
-/* export const logout = () => dispatch => {
+ export const logout = () => dispatch => {
 	dispatch({
 		type: LOGOUT,
 	});
-}*/
+}
 
 // USERS
 export const editUser = (reqObj) => (dispatch, getState) => {

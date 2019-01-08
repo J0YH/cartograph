@@ -6,6 +6,7 @@ import {
 	REQUEST_ALL_USERS_FAIL,
 	REQUEST_EDIT_USER_SUCCESS,
 	REQUEST_USER_SUCCESS
+	LOGOUT
 } from '../actions/action';
 
 const initialState = {
@@ -27,11 +28,10 @@ export const accountReducer = (state = initialState, action) => {
 			return Object.assign({}, state, {
 				token: action.data.authToken,
 			});
-		/*case logout - token: null
+		case LOGOUT:
 			return Object.assign({}, state, {
 				token: null,
 			});
-		*/
 		case REQUEST_ALL_USERS_SUCCESS:
 			return Object.assign({}, state, {
 				users: action.data,

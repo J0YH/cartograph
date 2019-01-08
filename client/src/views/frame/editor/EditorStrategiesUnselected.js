@@ -2,19 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 export class EditorStrategiesUnselected extends React.Component {
-	constructor(props) {
-		super(props);
-		
-		this.state = {
-			buttonState: false,
-		};
-	}
 
 	toggleButton(e) {
 		e.preventDefault();
-		this.setState({
-			buttonState: !this.state.buttonState,
-		});
+
 		const reqObj = {
 			'strategy': this.props.strategy._id
 		};
@@ -34,7 +25,7 @@ export class EditorStrategiesUnselected extends React.Component {
 					[ {this.props.strategy.source} ]
 				</div>
 				<button onClick={e => this.toggleButton(e)}>
-					{this.state.buttonState ? <span>REMOVE</span> : <span>ADD</span>}
+					<span>ADD</span>
 				</button>
 			</div>
 		)
