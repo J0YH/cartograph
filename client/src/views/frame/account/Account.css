@@ -1,0 +1,135 @@
+.a-title {
+	text-align: center;
+	margin: auto;
+	width: 100%;
+	margin-top: 8vh;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+	font-size: 34px;
+}
+
+.a-form-container {
+	border-style: solid;
+	border-color: rgb(179,138,88);
+	border-width: 1px;
+	border-top-width: 12px;
+	width: 70%;
+	margin: auto;
+	margin-top: 4vh;
+	padding: 1vh;
+}
+
+.a-form-row {
+	margin: 1vh 0;
+	width: 100%;
+	padding: 0;
+}
+
+.a-form-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.a-label {
+	margin: 0;
+    padding:6px 6px 6px 0;
+    display: inline-block;
+    float: left;
+    width: 25%;
+    margin-top: 3px;
+    font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+	font-size: 17px;
+}
+
+.a-input {
+	margin: 0;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background: rgba(179,138,88, 0.15);
+    font-family: 'Noto Serif KR', serif;
+	font-weight: 300;
+	font-size: 13px;
+    resize: vertical;
+    float: right;
+    width: 75%;
+    overflow-y:auto;
+    /*overflow: scroll;*/
+}
+
+.a-select {
+    border: none;
+    outline: none;
+    background: rgba(179,138,88, 0.15);
+    border-radius: 0;
+    font-family: 'Noto Serif KR', serif;
+	font-weight: 300;
+	font-size: 13px;
+    resize: vertical;
+    float: left;
+    width: 75%;
+    height: 3.6vh;
+}
+
+.a-save {
+	text-align: right;
+	margin-top: 2.5vh;
+	margin-bottom: 1vh;
+}
+
+.a-save button {
+	background: #b38a58;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 400;
+	font-size: 12px;
+	color: white;
+	height: 3.3vh;
+	width: 6vw;
+	padding: 0.6vh 0.5vw;
+	border: none;
+	outline: none;
+	border-radius: 2px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.a-save button:hover {
+	font-weight: 700;
+	transform: translateY(2px);
+}
+
+
+/*
+.account-bg {
+	margin-left: 100px;
+	margin-top: 0px;
+	height: 100vh;
+}
+
+.form-container {
+	width: 85%;
+	margin: auto;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d2d2d2;
+	border-radius: 5px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	padding-top: 10px;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.account-save {
+	margin-top: 10px;
+	border-color: #d2d2d2;
+	border-radius: 5px;
+	background-color: #ffd7d1;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+*/

@@ -1,0 +1,117 @@
+* {
+	box-sizing: border-box;
+}
+
+.f-container {
+	/*border: solid blue;*/
+
+}
+
+.f-left-nav {
+/*	border: solid red;
+*/	position: fixed;
+	left: 5%;
+	top: 30%;
+	-webkit-transform-origin: left top;
+    -webkit-transform:rotate(-90deg) translateX(-100%);
+}
+
+.f-left-nav ul {
+	margin: 0;
+/*	border: solid blue;*/
+}
+
+.f-left-nav li {
+	list-style: none;
+	float: left;
+	padding: 6px 40px 10px 40px;
+	width: 33%;
+	margin: 0;
+	text-align: center;
+	/*border: solid green;*/
+}
+
+.f-left-nav a {
+	text-decoration: none;
+	font-family: 'Noto Serif KR', serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: white;
+}
+
+.f-track {
+	background: #270e4f;
+}
+
+.f-log {
+	background: #b38a58;
+}
+.f-edit {
+	background: #264027;
+}
+
+.f-top-nav {
+	background: black;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 7vh;
+}
+
+.f-top-nav h1 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 700;
+	font-size: 3vh;
+	color: #B38a58;
+	text-align: center;
+}
+
+.f-compass {
+	position: absolute;
+	top: 20%;
+	right: 2%;
+	background-color: Transparent;
+	border:none;
+	outline: none;
+	border:none;
+	cursor: pointer;
+}
+
+.f-compass:hover {
+	transform: translateY(2px);
+}
+
+.f-hamburger {
+	background: black;
+	position: fixed;
+	top: 7vh;
+	right: 0;
+	/*height: 200px;*/
+	width: 14vw;
+}
+
+.f-hamburger ul {
+	margin-top: 1.8vh;
+}
+
+.f-hamburger li {
+	list-style: none;
+	padding-right: 2vw;
+	margin: 0;
+	text-align: center;
+	line-height: 2;
+}
+
+.f-hamburger a {
+	text-decoration: none;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+	font-size: 1.5vh;
+	color: #d2b99b;
+}
+
+.f-hamburger a:hover {
+	font-weight: 400;
+	/*color: white;*/
+}

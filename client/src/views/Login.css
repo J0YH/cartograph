@@ -1,0 +1,80 @@
+.login-container {
+	padding-top: 30vh;
+}
+
+.login-area {
+	width: 35%;
+	margin: auto;
+	background-color: rgba(0,0,0,0.9);
+	border-radius: 1px;
+}
+
+.login-area h1 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 700;
+	font-size: 3vh;
+	text-align: center;
+	padding-top: 3vh;
+	color: #B38A58;
+}
+
+.login-form {
+	width: 60%;
+	margin: auto;
+	overflow: auto;
+}
+
+.login-input {
+	height: 30px;
+	width: 100%;
+	background-color: rgba(153,118,77,0.4);
+	border: none;
+	color: white;
+	font-family: 'Noto Serif KR', serif;
+	font-weight: 300;
+	font-size: 14px;
+	padding-left: 6px;
+	margin-bottom: 12px;
+	margin-top: 3px;
+	outline: none;
+}
+
+.login-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+.login-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+.login-input::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+
+.login-form button {
+	float: right;
+	background-color: rgb(39,14,79);
+	border: #36136F;
+	color: white;
+	height: 4vh;
+	width: 6vw;
+	margin: 15px 0px 25px 0px;
+	padding: 8px;
+	text-align: center;
+	border-radius: 2px;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	outline: none;
+}
+
+.login-form button:hover {
+	background-color: rgba(39, 14, 79, 0.8);
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.login-form button:active {
+	transform: translateY(3px);
+}

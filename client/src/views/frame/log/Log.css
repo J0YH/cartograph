@@ -1,0 +1,253 @@
+.l-header-container {
+	width: 80%;
+	margin: auto;
+	margin-bottom: 45px;
+}
+
+.l-header {
+	width: 100%;
+	padding-top: 9vh;
+	padding-bottom: 3vh;
+}
+
+.l-title {
+	width: 40%;
+	float: left;
+	padding:0;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+	font-size: 34px;
+}
+
+.l-tabs {
+	width: 60%;
+	float: left;
+	padding: 5px 0px 0px 0px;
+	margin: 0;
+	text-align: center;
+}
+
+
+.l-tabs button {
+	background-color: transparent;
+	width: 50%;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	border: none;
+	text-align: right;
+	cursor: pointer;
+}
+
+.l-tabs button:focus {
+	outline:none;	
+}
+
+.l-tabs button:hover{
+	font-weight: 700;
+	color: #3c5233;
+}
+
+.lg-container {
+	margin: auto;
+	width: 80%;
+}
+
+.lg-select-container {
+	background:rgba(179,138,88, 0.3);
+	height: 4.4vh;
+	width: 45%;
+	margin: auto;
+	padding-top: 1vh;
+	padding-right: 1.5vw;
+	border-radius: 2px;
+	text-align: center;
+}
+
+.lg-select {
+	background:none;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	outline: none;
+	border: none;
+	text-indent: 2vw;
+	width: 100%;
+}
+
+.lg-actions-container {
+	margin-top: 4.5vh;
+}
+
+.lg-instructions {
+	margin: auto;
+	margin-bottom: 4vh;
+	text-align: center;
+	width: 100%;
+	font-family: 'Noto Serif KR', serif;
+	font-weight: 300;
+	font-size: 15px;
+}
+
+.lga-container {
+	text-align: center;
+	margin: auto;
+	font-family: 'Noto Serif KR', serif;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.lga-container a {
+	text-decoration: none;
+	color: rgb(39,14,79);
+	font-weight: 700;
+}
+
+.lga-container a:hover {
+	color: rgba(39,14,79, 0.7);
+}
+
+.lgaa-container {
+	border: solid #b38a58;
+	width: 75%;
+	margin: 3vh auto;
+}
+
+.lgaa-container:after {
+	content: "";
+    display: table;
+    clear: both;
+    overflow: hidden;
+}
+
+.lgaa-left {
+	float: left;
+	width: 15%;
+	background: rgba(179,138,88, 0.2);
+	height: 8vh;
+	border-right: solid #b38a58;
+}
+
+.lgaa-left button {
+	cursor: pointer;
+	background: none;
+	border: none;
+	outline: none;
+	height: 8vh;
+	width: 100%;
+	height: 100%;
+}
+
+.lgaa-right {
+	float: left;
+	padding: 0vw 0vw 0vw 2vw;
+	width: 85%;
+	font-family: 'Noto Serif KR', serif;
+	font-weight: 400;
+	font-size: 1.4vh;
+	height: 8vh;
+}
+
+.lgaa-bolder {
+	font-weight: 600;
+}
+
+.lgaa-left-complete {
+	float: left;
+	width: 15%;
+	background: rgb(179,138,88);
+	height: 8vh;
+	border-right: solid #b38a58;
+}
+
+.lgaa-x {
+	width:100%;
+	margin: auto;
+	text-align: center;
+	margin-top: 3.1vh;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+	font-size: 30px;
+	color: white;
+}
+
+.ls-container {
+	margin: auto;
+	width: 80%;
+}
+
+.ls-select-container {
+	background:rgba(179,138,88, 0.3);
+	height: 4.4vh;
+	width: 45%;
+	margin: auto;
+	padding-top: 1vh;
+	padding-right: 1.5vw;
+	border-radius: 2px;
+	text-align: center;
+}
+
+.ls-select {
+	background:none;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	outline: none;
+	border: none;
+	text-indent: 2vw;
+	width: 100%;
+}
+
+.ls-rater-container {
+	margin-top: 6vh;
+}
+
+.lsr-container {
+	border-style: solid;
+	border-color: rgb(179,138,88);
+	border-width: 1px;
+	border-top-width: 12px;
+	width: 50%;
+	margin: auto;
+	padding: 2vh 1vw;
+	text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.4;
+}
+
+.lsr-container label {
+  padding: 0 1em;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.lsr-container button {
+	margin-top: 3vh;
+	padding: 0.75vw;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1.2vh;
+	color: white;
+	border: none;
+	border-radius: 1px;
+	outline: none;
+	background: #b38a58;
+}
+
+.lsr-container button:hover {
+	background: #aa804d;
+	cursor: pointer;
+	font-weight: 600;
+	transform: translateY(1px);
+}
+
+.lsr-container p {
+	margin-bottom: 2.75vh;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+}

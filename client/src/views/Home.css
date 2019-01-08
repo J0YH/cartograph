@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+.h-parallax {
+  background: url('../assets/mountain-img.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.h-banner {
+  height: 100%;
+  width: 100%;
+  background: black;
+  color: #2B6779;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 30vh;
+  padding-bottom: 55vh;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 12vh;  
+}
+
+.h-banner p {
+  margin-bottom: 4vh;
+}
+
+.h-signin {
+  height: 100%;
+}
