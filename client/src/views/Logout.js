@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { logout } from '../actions/action';
 import './Logout.css';
 
 export class Logout extends React.Component {
 
 	componentDidMount() {
-		//this.props.dispatch logout action here
+		this.props.dispatch(logout());
 	}
 
 	render() {
@@ -24,4 +25,10 @@ export class Logout extends React.Component {
 
 }
 
-export default connect()(Logout)
+const mapStateToProps = (state) => {
+	return {token: state.account.token}
+}
+
+export default connect(mapStateToProps)(Logout)
+
+

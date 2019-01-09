@@ -6,7 +6,6 @@ import arrowLeft from '../../assets/arrow-left.png'
 import rightArrow from '../../assets/right-arrow.png'
 import compass from '../../assets/compass.png'
 import { getUser } from '../../actions/action';
-//import { getUser } from '../../actions/action';
 
 export class Frame extends React.Component {
 	constructor() {
@@ -88,30 +87,30 @@ export class Frame extends React.Component {
 						<div className='f-hamburger'>
 							<ul onMouseLeave={e => {this.handleLinkClick(e)}}>
 								<li>
-									<NavLink
+									<Link
 										strict
 										to='/about'
 
 									>
 										ABOUT
-									</NavLink>
+									</Link>
 								</li>
 								<li>
-									<NavLink
+									<Link
 										strict
 										to='/frame/account'
 										onClick={e => {this.handleLinkClick(e)}}
 									>
 										ACCOUNT
-									</NavLink>
+									</Link>
 								</li>
 								<li>
-									<NavLink
+									<Link
 										strict
 										to='/logout'
 									>
 										LOG OUT
-									</NavLink>
+									</Link>
 								</li>
 							</ul>
 						</div>
