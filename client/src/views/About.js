@@ -29,6 +29,10 @@ export class About extends React.Component {
 							<h3>what's in a name?</h3>
 							<p>Cartography is the art and science of mapmaking. Our tool, CARTOGRAPH, helps women discover and navigate their professional worlds.</p>
 						</section> 
+						<section>
+							<h3>learn more</h3>
+							<p>Questions? Want to get involved? Contact the app creator <a href="&#106;&#111;&#121;&#064;&#104;&#101;&#108;&#108;&#111;&#046;&#099;&#111;&#100;&#101;&#115;">here</a>.</p>
+						</section> 
 					</div>
 
 				</div>
