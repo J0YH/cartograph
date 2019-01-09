@@ -58,7 +58,6 @@ export class Editor extends React.Component {
 
 	sendActionEdits(id, reqObj) {
 		this.props.dispatch(editAction(id, reqObj));
-		//console.log('sending action edits', id, reqObj);
 	}
 
 	sendGoalCreate(reqObj) {
@@ -94,7 +93,6 @@ export class Editor extends React.Component {
 	};
 
 	render() {
-		console.log('RENDER editor', this.props.goals);
 		return (
 			<div className='pad'>
 				<div className='e-header-container'>

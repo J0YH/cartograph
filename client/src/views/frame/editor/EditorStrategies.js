@@ -10,8 +10,7 @@ export class EditorStrategies extends React.Component {
 	}
 
 	componentDidlMount() {
-
-		console.log('component did mount indeed');
+		console.log('component did mount indeed sire');
 	}
 
 	componentDidUpdate(prevProps) {
@@ -38,18 +37,11 @@ export class EditorStrategies extends React.Component {
 			return strategy._id
 		});
 
-		console.log('allIds', allIds);
-
 		const selectedIds = this.props.strategies.map(strategy => {
 			return strategy.strategy._id
 		});
 
-		console.log(selectedIds);
-
 		let unselectedIds = allIds.filter(id => !selectedIds.includes(id));
-
-
-		console.log(unselectedIds);
 
 		unselectedIds.forEach(id => {   
 			this.props.allStrategies.map(strategy => {
@@ -58,8 +50,6 @@ export class EditorStrategies extends React.Component {
 			    }
 		  	});
 		});
-
-		console.log(unselectedStrategies);
 		
 		return(
 			<div className='es-container'>

@@ -23,9 +23,7 @@ export class Frame extends React.Component {
 
 	handleCompassClick(e) {
 		e.preventDefault();
-		
-		console.log('compass clicked yo');
-		
+
 		this.setState({
 			showHamburger: !this.state.showHamburger,
 		});

@@ -51,8 +51,6 @@ export class EditorAccomplishmentsBox extends React.Component {
 			reqObj.description = this.state.description;
 		};
 
-		console.log(reqObj);
-
 		this.props.sendAccomplishmentEdits(this.props.accomplishment._id, reqObj);
 		
 		this.setState({

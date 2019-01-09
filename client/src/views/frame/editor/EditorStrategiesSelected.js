@@ -9,7 +9,6 @@ export class EditorStrategiesSelected extends React.Component {
 	}
 
 	render() {
-		//console.log('SELECTED RENDER', this.props);
 		return(
 			<div className='ess-strategy'>
 				<h4>{this.props.strategy.strategy.name.toUpperCase()}</h4>

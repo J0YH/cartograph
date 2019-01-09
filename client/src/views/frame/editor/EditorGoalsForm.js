@@ -117,12 +117,6 @@ export class EditorGoalsForm extends React.Component {
 			editGoalObj.dueDate = this.state.dueDate;
 		};
 
-		/*if (this.state.action) {
-
-		}*/
-
-		//console.log('sending this to parent', this.props.goal._id, editGoalObj);
-
 		this.props.sendGoalEdits(this.props.goal._id, editGoalObj);
 
 	}
@@ -176,8 +170,6 @@ export class EditorGoalsForm extends React.Component {
 	}
 
 	render() {
-		console.log('RENDER editor goals form');
-
 		if(this.props.formType === 'edit') {
 			const currentGoal = this.props.goal;
 			return (

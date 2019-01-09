@@ -37,12 +37,10 @@ export const accountReducer = (state = initialState, action) => {
 				users: action.data,
 			});
 		case REQUEST_USER_SUCCESS:
-			console.log("request user success reducer", action.data);
 			return Object.assign({}, state, {
 				user: action.data,
 			});
 		case REQUEST_EDIT_USER_SUCCESS:
-			console.log("request edit user success reducer", action.data);
 			return Object.assign({}, state, {
 				user: action.data,
 			});

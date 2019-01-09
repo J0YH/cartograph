@@ -6,7 +6,6 @@ import TrackerStrategiesStrategy from './TrackerStrategiesStrategy';
 export class TrackerStrategies extends React.Component {
 	constructor(props) {
 		super(props);
-		console.log(this.props.strategies);
 	}
 
 	render() {

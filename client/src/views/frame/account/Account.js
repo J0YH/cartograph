@@ -79,7 +79,6 @@ export class Account extends React.Component {
 		};
 
 		// need to add location with similar logic as name (location also nested obj)
-		// console.log("REQUEST OBJ is", reqObj);
 		this.props.dispatch(editUser(reqObj));
 
 	}

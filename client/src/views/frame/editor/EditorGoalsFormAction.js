@@ -52,8 +52,6 @@ export class EditorGoalsFormAction extends React.Component {
 			//console.log('need to finish this', this.props.goalId);
 			//const goalIdAsString = this.props.goalId.toString();
 
-
-			console.log(this.props.goalId, reqObj);
 			this.props.sendActionAdd(this.props.goalId, reqObj);
 		}
 		
@@ -61,8 +59,6 @@ export class EditorGoalsFormAction extends React.Component {
 
 	handleDelete(e) {
 		e.preventDefault();
-		console.log('this will eventually delete an action');
-
 		this.props.sendActionDelete(this.props.action._id);
 	}
 

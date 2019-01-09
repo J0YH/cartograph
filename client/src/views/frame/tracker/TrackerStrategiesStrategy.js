@@ -12,7 +12,6 @@ export class TrackerStrategiesStrategy extends React.Component {
 		this.state = {
 			showDetails: false,
 		}
-		console.log(this.props.strategy);
 	};
 
 	expandHandler() {

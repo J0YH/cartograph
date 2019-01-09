@@ -10,8 +10,6 @@ export class LogGoalsActions extends React.Component {
 	};
 
 	render() {
-		console.log('refreshing LogGoalsActions.js');
-		
 		if (this.props.goal.actions.length === 0) {
 			return(
 				<div className='lga-container'>

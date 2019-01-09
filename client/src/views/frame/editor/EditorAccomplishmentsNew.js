@@ -31,8 +31,6 @@ export class EditorAccomplishmentsNew extends React.Component {
 		if (this.state.completedDate) {
 			reqObj.completedDate = this.state.completedDate;
 		};
-		
-		console.log(reqObj);
 
 		this.props.sendAccomplishmentAdd(reqObj);
 	};

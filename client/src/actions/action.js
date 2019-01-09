@@ -85,12 +85,10 @@ export const login = (username, password) => dispatch => {
 		},
 	}).then(res => res.json())
 	.then(data => {
-		console.log(data);
 		dispatch({
 			type: LOGIN_SUCCESS,
 			data,
 		});
-		console.log(data);
 	}).catch(err => {
 		dispatch({
 			type: LOGIN_FAIL,
@@ -125,7 +123,6 @@ export const editUser = (reqObj) => (dispatch, getState) => {
 	}).then(res => {
 		return res.json()
 	}).then(data => {
-		console.log(data);
 		dispatch({
 			type: REQUEST_EDIT_USER_SUCCESS,
 			data,
@@ -217,7 +214,6 @@ export const getGoals = () => (dispatch, getState)  => {
 };
 
 export const editGoal = (goalId, editObj) => (dispatch, getState) => {
-	console.log(goalId, editObj);
 	const authToken = getState().account.token;
 	const decodedToken = jwtDecode(authToken);
 	dispatch({
@@ -238,7 +234,6 @@ export const editGoal = (goalId, editObj) => (dispatch, getState) => {
 			type: REQUEST_EDIT_GOAL_SUCCESS,
 			data,
 		});
-		console.log(data);
 	}).catch(err => {
 		dispatch({
 			type: REQUEST_EDIT_GOAL_FAIL,
@@ -323,7 +318,6 @@ export const completeAction = (id) => (dispatch, getState) => {
 	.then(res => {
 		return res.json()
 	}).then(data => {
-		console.log(data);
 		dispatch({
 			type: REQUEST_COMPLETE_ACTION_SUCCESS,
 			data,
@@ -390,7 +384,6 @@ export const getStrategies = () => (dispatch, getState) => {
 };
 
 export const rateStrategy = (strategyId, ratingObj) => (dispatch, getState) => {
-	console.log(ratingObj);
 	const authToken = getState().account.token;
 	const decodedToken = jwtDecode(authToken);
 	dispatch({
@@ -414,7 +407,6 @@ export const rateStrategy = (strategyId, ratingObj) => (dispatch, getState) => {
 			strategyId,
 			ratingObj,
 		});
-		console.log(data, strategyId);
 	}).catch(err => {
 		dispatch({
 			type: REQUEST_RATE_STRATEGY_FAIL,
@@ -476,7 +468,6 @@ export const addGoal = (reqObj) => (dispatch, getState) => {
 			type: REQUEST_ADD_GOAL_SUCCESS,
 			data,
 		});
-		console.log(data);
 	}).catch(err => {
 		dispatch({
 			type: REQUEST_ADD_GOAL_FAIL,
@@ -625,7 +616,6 @@ export const deleteAccomplishment = (id) => (dispatch, getState) => {
 			type: REQUEST_DELETE_ACCOMPLISHMENT_SUCCESS,
 			data,
 		});
-		console.log(data);
 	}).catch(err => {
 		dispatch({
 			type: REQUEST_DELETE_ACCOMPLISHMENT_FAIL,
@@ -637,8 +627,6 @@ export const deleteAccomplishment = (id) => (dispatch, getState) => {
 // add action to existing goal
 export const addAction = (id, reqObj) => (dispatch, getState) => {
 	const authToken = getState().account.token;
-	console.log(id, reqObj);
-
 	dispatch({
 		type: REQUEST_ADD_ACTION
 	});
@@ -651,15 +639,12 @@ export const addAction = (id, reqObj) => (dispatch, getState) => {
 			Authorization: `Bearer ${authToken}`
 		},
 	}).then(res => {
-		console.log(res);
 		return res.json();
 	}).then(data => {
-		console.log(data);
 		dispatch({
 			type: REQUEST_ADD_ACTION_SUCCESS,
 			data,
 		});
-		console.log(data);
 	}).catch(err => {
 		dispatch({
 			type: REQUEST_ADD_ACTION_FAIL,
@@ -710,7 +695,6 @@ export const deleteAction = (id) => (dispatch, getState) => {
 	}).then(res => {
 		return res.json()
 	}).then(data => {
-		console.log(data);
 		dispatch({
 			type: REQUEST_DELETE_ACTION_SUCCESS,
 			data
