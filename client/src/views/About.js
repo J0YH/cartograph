@@ -31,7 +31,7 @@ export class About extends React.Component {
 						</section> 
 						<section>
 							<h3>learn more</h3>
-							<p>Questions? Want to get involved? Contact the app creator <a className='about-contact' href="mailto:&#106;&#111;&#121;&#064;&#104;&#101;&#108;&#108;&#111;&#046;&#099;&#111;&#100;&#101;&#115;">here</a>.</p>
+							<p>Questions? Want to get involved? Contact the app creator <a className='about-contact' href="mailto:hello@joy.codes">here</a>.</p>
 						</section> 
 					</div>
 
