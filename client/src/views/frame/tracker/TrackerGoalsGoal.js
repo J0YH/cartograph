@@ -16,9 +16,11 @@ export class TrackerGoalsGoal extends React.Component {
 		const categoriesArray = this.props.categories;
 		const goalCategoryId = this.props.goal.category;
 		this.goalCategoryObj = categoriesArray.find(category => category._id === goalCategoryId);
+		console.log(this.goalCategoryObj);
 	}
 
 	render() {
+		console.log(this.props);
 		if (this.props.goal.actions.length > 0) {
 			return (
 				<div className='tgg-goal'>
@@ -67,7 +69,6 @@ export class TrackerGoalsGoal extends React.Component {
 		}
 
 		return (
-
 			<div className='tgg-goal'>
 				<div className='tgg-goal-header'>
 					<h3>{this.props.goal.name}</h3>
