@@ -7,11 +7,6 @@ import './Tracker.css'
 import { getGoals, getStrategies, getAccomplishments, getCategories } from '../../../actions/action';
 
 export class Tracker extends React.Component {
-
-	// componentWillMount() {
-	// 	this.props.dispatch(getCategories());
-	// }
-
 	componentDidMount() {
 		this.props.dispatch(getGoals());
 		this.props.dispatch(getStrategies());
