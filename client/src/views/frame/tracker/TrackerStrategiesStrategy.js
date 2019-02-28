@@ -34,7 +34,13 @@ export class TrackerStrategiesStrategy extends React.Component {
 	}
 
 	render() {
-		if (this.props) {
+		console.log(this.props);
+
+		if (!this.props.strategy) {
+			return (<div>Error loading strategies!</div>)
+		}
+
+		if (this.props.strategy) {
 			return(
 				<div className='tss-box'>		
 					<h4>{this.props.strategy.strategy.name.toUpperCase()}</h4>
@@ -61,13 +67,7 @@ export class TrackerStrategiesStrategy extends React.Component {
 				</div>
 			)
 		}
-
-		if (!this.props) {
-			return (<div>Error loading strategies!</div>)
-		}
-
 	}
-
 }
 
 export default connect()(TrackerStrategiesStrategy)
