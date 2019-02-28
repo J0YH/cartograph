@@ -18,7 +18,7 @@ export class TrackerAccomplishments extends React.Component {
 		return(
 			<div>
 				{this.props.accomplishments.map(accomplishment =>
-					(<TrackerAccomplishmentsAccomplishment accomplishment={accomplishment} categories={this.props.categories} />
+					(<TrackerAccomplishmentsAccomplishment key={accomplishment.id} accomplishment={accomplishment} categories={this.props.categories} />
 				))}
 			</div>)
 	}

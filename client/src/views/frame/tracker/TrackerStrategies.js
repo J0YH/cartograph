@@ -16,7 +16,7 @@ export class TrackerStrategies extends React.Component {
 		if (this.props.strategies) {
 			return(
 				<div className='tss-row'>{this.props.strategies.map(strategy => (
-					<TrackerStrategiesStrategy strategy={strategy}/>
+					<TrackerStrategiesStrategy key={strategy.id} strategy={strategy}/>
 					))}
 				</div>
 			)

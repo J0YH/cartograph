@@ -5,22 +5,19 @@ import './Tracker.css'
 
 export class TrackerGoalsGoal extends React.Component {
 
-	/*componentDidMount() {
-		// this.props.goal.actions is undefined on render but exists on componentdidmount - workaround below but ?
-		console.log(this.props.goal.actions);
-	}*/
+	// componentDidMount() {
+	// 	// this.props.goal.actions is undefined on render but exists on componentdidmount - workaround below but ?
+	// 	// console.log(this.props.goal.actions);
+	// }
 
 	constructor(props) {
 		super(props);
-
 		const categoriesArray = this.props.categories;
 		const goalCategoryId = this.props.goal.category;
 		this.goalCategoryObj = categoriesArray.find(category => category._id === goalCategoryId);
-		console.log(this.goalCategoryObj);
 	}
 
 	render() {
-		console.log(this.props);
 		if (this.props.goal.actions.length > 0) {
 			return (
 				<div className='tgg-goal'>
@@ -36,7 +33,7 @@ export class TrackerGoalsGoal extends React.Component {
 						<p><span className='tgg-goal-bolder'>Description</span>: {this.props.goal.description}</p>
 					</div>
 					{this.props.goal.actions.map(action => (
-						<ul>
+						<ul key={action.id}>
 							{action.completedDate ? 
 								<div className='tgg-action-completed'>
 									<li className='tgg-action-completed-date'>
@@ -84,12 +81,7 @@ export class TrackerGoalsGoal extends React.Component {
 					No actions yet.
 				</div>
 			</div>
-
-
-
 		)
-
-
 	}
 }
 

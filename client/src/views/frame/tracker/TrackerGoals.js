@@ -11,7 +11,7 @@ export class TrackerGoals extends React.Component {
 		return(
 			<div>
 				{this.props.goals.map(goal => (
-					<TrackerGoalsGoal goal={goal} categories={this.props.categories}/>
+					<TrackerGoalsGoal key={goal.id} goal={goal} categories={this.props.categories}/>
 				))}
 			</div>)
 	}
