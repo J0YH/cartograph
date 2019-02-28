@@ -34,30 +34,38 @@ export class TrackerStrategiesStrategy extends React.Component {
 	}
 
 	render() {
-		return(
-			<div className='tss-box'>		
-				<h4>{this.props.strategy.strategy.name.toUpperCase()}</h4>
-				{this.props.strategy.rating.length > 0 ? 
-					<div>
-						<h3>{this.findAvgRating()}</h3>
-						<p className='tss-avg-rating'>AVG RATING</p>
+		if (this.props) {
+			return(
+				<div className='tss-box'>		
+					<h4>{this.props.strategy.strategy.name.toUpperCase()}</h4>
+					{this.props.strategy.rating.length > 0 ? 
+						<div>
+							<h3>{this.findAvgRating()}</h3>
+							<p className='tss-avg-rating'>AVG RATING</p>
+						</div>
+						: <p className='tss-no-ratings'>No ratings yet</p>
+					}
+					<div className='tss-expand'>		
+						<button onClick={e => this.expandHandler(e)}>
+							{this.state.showDetails ?
+								<img src={upArrowBlack} style={{ width: '35px' }} />
+								: <img src={downArrowWhite} style={{ width: '35px' }} />
+							}
+						</button>
 					</div>
-					: <p className='tss-no-ratings'>No ratings yet</p>
-				}
-				<div className='tss-expand'>		
-					<button onClick={e => this.expandHandler(e)}>
-						{this.state.showDetails ?
-							<img src={upArrowBlack} style={{ width: '35px' }} />
-							: <img src={downArrowWhite} style={{ width: '35px' }} />
-						}
-					</button>
+					<div className='tss-expanded-container'>		
+						{this.state.showDetails ? 
+								<TrackerStrategiesStrategyHistory strategy={this.props.strategy}/>
+						: null}
+					</div>
 				</div>
-				<div className='tss-expanded-container'>		
-					{this.state.showDetails ? 
-							<TrackerStrategiesStrategyHistory strategy={this.props.strategy}/>
-					: null}
-				</div>
-			</div>)
+			)
+		}
+
+		if (!this.props) {
+			return (<div>Error loading strategies</div>)
+		}
+
 	}
 
 }
