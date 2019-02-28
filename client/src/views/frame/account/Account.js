@@ -155,7 +155,10 @@ export class Account extends React.Component {
 
 					<div className='a-form-row'>
 						<div className='a-label'>
-							<label for='experience'>Experience (years)</label>
+							<label for='experience'>
+								Years <br />
+								Experience
+							</label>
 						</div>
 						<input
 							type='number'

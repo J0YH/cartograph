@@ -34,10 +34,8 @@ export class TrackerStrategiesStrategy extends React.Component {
 	}
 
 	render() {
-		console.log(this.props);
-
 		if (!this.props.strategy) {
-			return (<div>Error loading strategies!</div>)
+			return (<div>Error loading strategies</div>)
 		}
 
 		if (this.props.strategy) {
