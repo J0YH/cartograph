@@ -300,6 +300,15 @@
 	font-size: 14px;
 }
 
+.tssh-source a {
+	text-decoration: none;
+	color: black;
+}
+
+.tssh-source a:hover {
+	text-decoration: underline;
+}
+
 .tsshr-date {
 	padding: 4px 30px 4px 10px;
 	border-right: 1.5px solid white;

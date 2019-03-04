@@ -16,7 +16,7 @@ export class TrackerStrategiesStrategyHistory extends React.Component {
 			<div className='tssh-container'>
 				<div className='tssh-details'>
 					<p>{description}</p>
-					<p className='tssh-source'>[ {source} ]</p>
+					<p className='tssh-source'>[ <a href="https://www.goodreads.com/book/show/11225688-break-your-own-rules" target="_blank">Break Your Own Rules</a> ]</p>
 				</div>
 				<TrackerStrategiesStrategyHistoryRatings ratings={this.props.strategy.rating} />
 			</div>)
